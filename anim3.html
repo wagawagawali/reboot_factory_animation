@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title> Rémy Martiat - Animations</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="_styles/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="_styles/style.css" />
+				
+	</head>
+
+	<body>
+	
+		<header> 
+			<h1 class="title">Rémy Martiat</h1>
+			<h2 class="title subtitle">Animation 4</h2>
+			<a href="anim2.html" class="page page__previous"> </a>
+			<a href="anim4.html" class="page page__next"></a>
+			
+		</header>
+		
+		<div class="iphone">
+			<iframe  class="iphone iphone--screen" width="320px" height="568px" src="http://remymartiat.com/Reboot-factory/push_button/"></iframe			
+		</div>
+
+		<div class="description">
+			<h1>Effet tap</h1>
+			<h2>Effet de "bulle" qui se crée lorsque l'on tappe sur un élément avec lequel il peut y avoir interaction.<small>Modèle : Iphone 5</small></h2>			
+		</div>
+
+		<svg class="opener" version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+		<polygon fill="#40A9DB" points="25.041,14.882 25.023,10.287 14.816,10.25 14.779,0.042 10.185,0.026 10.222,10.232 0.016,10.195 
+		0.033,14.791 10.239,14.828 10.275,25.033 14.872,25.05 14.834,14.846 "/>
+		</svg>
+
+		<nav class="section section__nav">
+			<svg class="closer" version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+			<polygon fill="#F6F6F6" points="19.719,23.043 22.955,19.781 15.764,12.538 22.956,5.293 19.719,2.033 12.528,9.276 5.338,2.033 
+			2.1,5.295 9.29,12.538 2.1,19.78 5.338,23.042 12.527,15.8 "/>
+			</svg>
+
+			
+			<ul>
+				<li class="link"><a href="http://adrienpierre.be/projets/rebootfactory/animation/anim1.html">Adrien</a></li>
+
+				<li class="link2"><a href="http://www.kevinschroeder.fr/projets/rebootfactory/animation/anim1.html">Kevin</a></li>
+				<li class="link3"><a href="http://martincollignon.be/projets/rebootfactory/animation/anim1.html">Martin</a></li>
+				<li class="link4"><a href="http://remymartiat.com/projets/rebootfactory/animation/anim1.html">Rémy</a></li>
+			</ul>
+		</nav>
+
+			<script>
+
+			//vanilla javascript
+
+			var main = document.getElementsByClassName("iphone"),
+
+			nav = document.getElementsByClassName("section__nav"),
+			
+			 btnCloser = document.getElementsByClassName("closer"),
+			  link = document.getElementsByClassName("link"),
+			  link2 = document.getElementsByClassName("link2"),
+			  link3 = document.getElementsByClassName("link3"),
+			  link4 = document.getElementsByClassName("link4"),
+			btnOpener = document.getElementsByClassName("opener");
+
+
+			
+
+			/*for(var i=0; i<btnOpener.length; i++){}*/
+
+			btnOpener[0].addEventListener("click", function(){
+
+				main[0].classList.add("nav--open")
+				nav[0].classList.add("nav--open")
+				main[0].classList.remove("nav--out")
+				nav[0].classList.remove("nav--out")
+				link[0].classList.add("nav--open")
+				link2[0].classList.add("nav--open")
+				link3[0].classList.add("nav--open")
+				link4[0].classList.add("nav--open")
+				link[0].classList.remove("nav--out")
+				link2[0].classList.remove("nav--out")
+				link3[0].classList.remove("nav--out")
+				link4[0].classList.remove("nav--out")
+			});
+
+			btnCloser[0].addEventListener("click", function(){
+
+				main[0].classList.remove("nav--open")
+				nav[0].classList.remove("nav--open")
+				main[0].classList.add("nav--out")
+				nav[0].classList.add("nav--out")
+				link[0].classList.add("nav--out")
+				link2[0].classList.add("nav--out")
+				link3[0].classList.add("nav--out")
+				link4[0].classList.add("nav--out")
+
+			});
+
+			</script>
+		
+	</body>
+</html>
